@@ -1,0 +1,17 @@
+{
+  "name": "codebuild-demo-project",
+  "source": {
+    "type": "S3",
+    "location": "test-standardrepo/MessageUtil.zip"
+  },
+  "artifacts": {
+    "type": "S3",
+    "location": "test-standardrepo-out"
+  },
+  "environment": {
+    "type": "LINUX_CONTAINER",
+    "image": "aws/codebuild/standard:5.0",
+    "computeType": "BUILD_GENERAL1_SMALL"
+  },
+  "serviceRole": "arn:aws:iam::221560712293:role/service-role/codebuild-StandardSimple-service-role"
+}
